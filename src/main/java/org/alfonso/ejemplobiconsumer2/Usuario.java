@@ -1,7 +1,6 @@
 package org.alfonso.ejemplobiconsumer2;
 
 public class Usuario
-    //input1, input2 -> void (BiConsumer) accept
 {
    private String nombre;
 
