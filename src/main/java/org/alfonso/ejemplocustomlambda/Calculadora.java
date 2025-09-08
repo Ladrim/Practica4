@@ -20,22 +20,6 @@ public class Calculadora
         return operations;
     }
 
-    /*public<T> T calculadora (T a, T b, Aritmetica<T> aritmetica) // MAL
-    {
-        String tipo = JOptionPane.showInputDialog("Seleccione: suma, resta, multiplicacion").toLowerCase();
-        if (!operations.containsKey(tipo))
-        {
-            JOptionPane.showMessageDialog(null,"Error, ha introducido un comando incorrecto");
-            return calculadora(a, b, aritmetica);
-        }
-        else
-        {
-            if(operations.containsKey("suma"))
-            {
-                operations.get(tipo)
-            }
-        }
-    }*/
 
     public <T> T calculadora2 (T a, T b, TipoDeCalculo tipoDeCalculo)
     {
@@ -67,20 +51,13 @@ public class Calculadora
     @Override
     public String toString()
     {
-        //operations.keySet();
-        //operations.values();
-        //operations.entrySet();
 
-        /*for (Map.Entry<TipoDeCalculo, Aritmetica<?>>entry: operations.entrySet())
-        {
-            System.out.println(entry.getKey().toString());
-        }*/
 
         String operationsAsString = operations.entrySet().stream()
             .map( it -> it.getKey().toString() )
             .collect(Collectors.joining(" "));
 
-        //operations.forEach ((tipoDeCalculo, aritmetica) -> System.out.println(tipoDeCalculo + " " + aritmetica ));
+
 
 
         return "operations=" + operationsAsString +
