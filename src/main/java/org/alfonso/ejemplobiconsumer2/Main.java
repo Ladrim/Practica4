@@ -9,7 +9,7 @@ public class Main
     {
         Usuario usuario = new Usuario();
 
-        BiConsumer<Usuario,String> asignarNombre = Usuario::setNombre; //(persona,nombre) -> persona.setNombre(nombre); Es lo mismo
+        BiConsumer<Usuario,String> asignarNombre = Usuario::setNombre;
 
         asignarNombre.accept(usuario,"pepito");
 
